@@ -1,0 +1,50 @@
+:root {
+  --bgColor: #ffecef;
+  --primColor: #ffcaca;
+  --secColor: #372948;
+  --textColor: #251b37;
+}
+
+.hero {
+  overflow: hidden;
+  position: relative;
+
+  .wrapper {
+    height: calc(100vh - 50px);
+    width: 300vw;
+    display: flex;
+    flex-direction: row;
+    transition: all 1s ease-out;
+
+    img {
+      filter: grayscale(70%);
+      width: 100vw;
+      object-fit: cover;
+    }
+  }
+  .toggle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 50px;
+
+    .arrow {
+      border: var(--secColor) 1px solid;
+      padding: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover {
+        background: var(--secColor);
+        opacity: 0.7;
+      }
+    }
+  }
+}

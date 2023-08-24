@@ -1,0 +1,81 @@
+:root {
+  --bgColor: #ffecef;
+  --primColor: #ffcaca;
+  --secColor: #372948;
+  --textColor: #251b37;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background: var(--bgColor);
+  height: 50px;
+
+  color: var(--textColor);
+
+  .left {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    margin: 0 20px;
+
+    .flag {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 24px;
+        aspect-ratio: 3/2;
+      }
+    }
+    .currency {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+    h1 {
+      font-size: x-large;
+      font-weight: 300;
+      font-style: oblique;
+    }
+  }
+  .right {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex: 1;
+    gap: 10px;
+    margin: 0 20px;
+    .cart {
+      position: relative;
+
+      .circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        color: var(--bgColor);
+        position: absolute;
+        top: -3px;
+        right: -3px;
+        width: 14px;
+        height: 14px;
+        border-radius: 100%;
+        background: var(--secColor);
+        font-size: 10px;
+      }
+    }
+  }
+}
