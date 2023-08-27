@@ -7,16 +7,49 @@
 
 .cards {
   line-height: 5px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 
-  img {
-    width: 200px;
+  .imgs {
+    position: relative;
+    display: flex;
+    height: 300px;
     aspect-ratio: 2/3;
-    border-radius: 5px 5px 0 0;
+
+    .img1 {
+      height: 100%;
+      width: 100%;
+      border-radius: 5px 5px 0 0;
+      filter: grayscale(80%);
+      position: absolute;
+      z-index: 3;
+      object-fit: cover;
+
+      &:hover {
+        z-index: 2;
+      }
+    }
+    .img2 {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      border-radius: 5px 5px 0 0;
+      filter: grayscale(80%);
+      position: absolute;
+      object-fit: cover;
+      z-index: 2;
+
+      &:hover {
+        z-index: 3;
+      }
+    }
   }
 
   p {
     margin: 15px 0;
     font-weight: 400;
+    z-index: 3;
   }
 
   .details {
@@ -24,6 +57,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    z-index: 3;
 
     .prices {
       display: flex;
