@@ -4,3 +4,34 @@
   --secColor: #372948;
   --textColor: #251b37;
 }
+
+.sections {
+  margin: 0 240px;
+  height: 600px;
+  text-align: justify;
+  color: var(--textColor);
+
+  .top {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    h2 {
+      flex: 1;
+      font-weight: 400;
+      font-size: 26px;
+    }
+    p {
+      flex: 3;
+      font-weight: 300;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+  }
+}

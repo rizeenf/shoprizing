@@ -1,0 +1,61 @@
+:root {
+  --bgColor: #ffecef;
+  --primColor: #ffcaca;
+  --secColor: #372948;
+  --textColor: #251b37;
+}
+
+.cards {
+  line-height: 5px;
+
+  img {
+    width: 200px;
+    aspect-ratio: 2/3;
+    border-radius: 5px 5px 0 0;
+  }
+
+  p {
+    margin: 15px 0;
+    font-weight: 400;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .prices {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+
+      span {
+        font-size: 20px;
+        color: var(--secColor);
+        font-weight: bold;
+      }
+
+      span:nth-child(1) {
+        font-size: 16px;
+        text-decoration: line-through;
+      }
+    }
+    .addToCart {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      background: var(--bgColor);
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 0 0 10px 0;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
