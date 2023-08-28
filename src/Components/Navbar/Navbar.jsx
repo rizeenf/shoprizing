@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.scss";
 import Flag from "../../Assets/id.svg";
 import ArrowDropDownOutlinedIcon from "@mui/icons-material/ArrowDropDownOutlined";
@@ -25,7 +25,9 @@ const Navbar = () => {
         <p>Batik</p>
       </div>
       <div className="center">
-        <h1>SHOPPRIZEING</h1>
+        <Link to="/">
+          <a>SHOPPRIZEING</a>
+        </Link>
       </div>
       <div className="right">
         <p>Homepage</p>
