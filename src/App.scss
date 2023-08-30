@@ -1,0 +1,13 @@
+:root {
+  --bgColor: #ffecef;
+  --primColor: #ffcaca;
+  --secColor: #372948;
+  --textColor: #251b37;
+}
+
+.App {
+  .link {
+    color: inherit;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,116 @@
+.w-cart {
+  position: absolute;
+  top: 50px;
+  right: 80px;
+  background: #fff;
+  min-height: 300px;
+  width: 320px;
+  z-index: 20;
+  border-radius: 5px;
+  border: 1px solid #a9a9a9;
+
+  .title {
+    text-align: center;
+  }
+  .listItem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .item {
+      margin: 0 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        width: 60px;
+        aspect-ratio: 2/3;
+      }
+
+      .details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .itemTitle {
+          font-size: 14px;
+        }
+
+        .itemDesc {
+          font-size: 12px;
+          text-align: justify;
+          color: #a9a9a9;
+        }
+
+        .itemPrice {
+          color: green;
+          font-weight: 500;
+        }
+      }
+      .delete {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #a9a9a9a9;
+        color: #fff;
+        width: 40px;
+        aspect-ratio: 1/1;
+        border-radius: 3px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #828282;
+        }
+      }
+
+      &:hover {
+        background-color: rgba($color: #a9a9a9, $alpha: 0.1);
+        border-radius: 5px;
+      }
+    }
+  }
+  .subtotal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+
+    h3 {
+      color: green;
+      font-weight: 500;
+    }
+  }
+  .checkout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+      font-size: 10px;
+      color: #a9a9a9;
+      cursor: pointer;
+      margin: 0 20px;
+    }
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      height: 40px;
+      border-radius: 2px;
+      border: none;
+      color: var(--bgColor);
+      background: rgb(100, 100, 100);
+      cursor: pointer;
+      font-weight: 600;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
