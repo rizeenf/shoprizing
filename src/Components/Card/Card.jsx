@@ -7,16 +7,16 @@ const Card = ({ item }) => {
     <div className="cards">
       <Link to={`../product/${item.id}`} className="link">
         <div className="imgs">
-          <img src={item.img1} alt={item.title} className="img1" />
-          <img src={item.img2} alt={item.title} className="img2" />
+          <img src={item.webformatURL} alt={item.user} className="img1" />
+          <img src={item?.userImageURL} className="img2" />
         </div>
 
-        <p>{item.title}</p>
+        <p>{item.tags.toUpperCase()}</p>
 
         <div className="details">
           <div className="prices">
-            <span>${item.oldPrice} </span>
-            <span>${item.newPrice} </span>
+            <span>${item.collections} </span>
+            <span>${item.comments} </span>
           </div>
           <div className="addToCart">
             <span>ADD</span>

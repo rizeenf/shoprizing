@@ -12,6 +12,8 @@
   position: relative;
   padding: 5px;
   cursor: pointer;
+  min-height: fit-content;
+  z-index: 20;
 
   &:hover {
     background-color: var(--bgColor);
@@ -57,6 +59,8 @@
     margin: 15px 0;
     font-weight: 400;
     z-index: 3;
+    font-style: italic;
+    font-size: 14px;
   }
 
   .details {

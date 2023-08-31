@@ -6,7 +6,7 @@ import Categories from "../../Components/Categories/Categories";
 
 const Home = () => {
   return (
-    <div>
+    <div className="home">
       <Hero />
       <Section type="Featured" />
       <Categories />
