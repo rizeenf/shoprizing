@@ -7,6 +7,7 @@ import Error from "./Pages/Error/Error";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const Layout = () => {
   return (
@@ -30,7 +31,7 @@ const router = createBrowserRouter([
         errorElement: <Error />,
       },
       {
-        path: "/products/:id",
+        path: "/products/:cat",
         element: <Products />,
         errorElement: <Error />,
       },
@@ -49,6 +50,26 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  // const [products, setProducts] = useState([]);
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const res = await axios.get(
+  //         `https://pixabay.com/api/?key=${process.env.REACT_APP_API_PIXABAY}&q=suit&image_type=photo&order=latest`
+  //       );
+
+  //       setProducts(res.data.hits);
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   };
+
+  //   fetchData();
+
+  //   return () => {};
+  // }, []);
+
   return (
     <>
       <RouterProvider router={router} />

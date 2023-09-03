@@ -8,15 +8,19 @@ const Card = ({ item }) => {
       <Link to={`../product/${item.id}`} className="link">
         <div className="imgs">
           <img src={item.webformatURL} alt={item.user} className="img1" />
-          <img src={item?.userImageURL} className="img2" />
+          {item?.userImageURL ? (
+            <img src={item?.userImageURL} className="img2" />
+          ) : (
+            ""
+          )}
         </div>
 
-        <p>{item.tags.toUpperCase()}</p>
+        <p>{item.tags.toUpperCase().slice(0, 25)}</p>
 
         <div className="details">
           <div className="prices">
-            <span>${item.collections} </span>
-            <span>${item.comments} </span>
+            <span>${item.previewWidth} </span>
+            <span>${item.previewHeight} </span>
           </div>
           <div className="addToCart">
             <span>ADD</span>

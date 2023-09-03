@@ -24,16 +24,16 @@ const Navbar = () => {
             <span>USD</span>
             <ArrowDropDownOutlinedIcon />
           </div>
-          <Link to="/products/1" className="link">
+          <Link to="/products/men" className="link">
             <p>Men</p>
           </Link>
-          <Link to="/products/1" className="link">
+          <Link to="/products/women" className="link">
             <p>Women</p>
           </Link>
-          <Link to="/products/1" className="link">
+          <Link to="/products/kids" className="link">
             <p>Kids</p>
           </Link>
-          <Link to="/products/1" className="link">
+          <Link to="/products/batik" className="link">
             <p>Batik</p>
           </Link>
         </div>
@@ -43,13 +43,13 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="right">
-          <Link to="/products/1" className="link">
+          <Link to="../" className="link">
             <p>Homepage</p>
           </Link>
-          <Link to="/products/1" className="link">
+          <Link to="../" className="link">
             <p>Stores</p>
           </Link>
-          <Link to="/products/1" className="link">
+          <Link to="../" className="link">
             <p>Promo</p>
           </Link>
           <SearchOutlinedIcon />

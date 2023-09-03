@@ -1,55 +1,87 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 import "./Product.scss";
 
 const Product = () => {
+  const [products, setProducts] = useState([]);
   const [currentImage, setCurrentImage] = useState(0);
 
-  const images = [
-    "https://images.pexels.com/photos/3538028/pexels-photo-3538028.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "https://images.pexels.com/photos/2043592/pexels-photo-2043592.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/2043592/pexels-photo-2043592.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  ];
+  let imageId = useParams().id;
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(
+          `https://pixabay.com/api/?key=${process.env.REACT_APP_API_PIXABAY}&image_type=photo&id=${imageId}`
+        );
+        setProducts(res.data.hits);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  console.log(products);
   return (
     <div className="w-product">
       <div className="left">
-        <div className="previewImage">
+        {products.map((item) => (
+          <div key={item.id} className="previewImage">
+            <img
+              src={item.largeImageURL}
+              alt="Images"
+              onClick={() => setCurrentImage(0)}
+              className={currentImage === 0 ? "active" : ""}
+            />
+            {item?.userImageURL ? (
+              <img
+                src={item.userImageURL}
+                alt="Images"
+                onClick={() => setCurrentImage(1)}
+                className={currentImage === 1 ? "active" : ""}
+              />
+            ) : (
+              ""
+            )}
+            <img
+              src={item.largeImageURL}
+              alt="Images"
+              onClick={() => setCurrentImage(2)}
+              className={currentImage === 2 ? "active" : ""}
+            />
+          </div>
+        ))}
+        {products.map((item) => (
           <img
-            src={images[0]}
-            alt="Images"
-            onClick={() => setCurrentImage(0)}
-            className={currentImage === 0 ? "active" : ""}
+            key={item.id}
+            src={currentImage === 1 ? item.userImageURL : item.largeImageURL}
+            className="mainImg"
           />
-          <img
-            src={images[1]}
-            alt="Images"
-            onClick={() => setCurrentImage(1)}
-            className={currentImage === 1 ? "active" : ""}
-          />
-          <img
-            src={images[2]}
-            alt="Images"
-            onClick={() => setCurrentImage(2)}
-            className={currentImage === 2 ? "active" : ""}
-          />
-        </div>
-        <img src={images[currentImage]} alt="" className="mainImg" />
+        ))}
       </div>
       <div className="right">
-        <div className="title">
-          <h2>Grey Woman's Coat</h2>
-          <h1>$30</h1>
-        </div>
-        <div className="desc">
-          <span>
-            Offer: Professional tutoring services in math and science subjects.
-            Experienced tutor with a proven track record of improving student
-            grades. Flexible scheduling and affordable rates Professional
-            tutoring services in math and science subjects. Experienced tutor
-            with a proven track record of improving student grades. Flexible
-            scheduling and affordable rates
-          </span>
-        </div>
+        {products.map((item) => (
+          <>
+            <div className="title">
+              <h2>{item.tags.toUpperCase()}</h2>
+              <h1>${item.previewHeight}</h1>
+            </div>
+            <div className="desc">
+              <span>
+                Offer: Professional tutoring services in math and science
+                subjects. Experienced tutor with a proven track record of
+                improving student grades. Flexible scheduling and affordable
+                rates Professional tutoring services in math and science
+                subjects. Experienced tutor with a proven track record of
+                improving student grades. Flexible scheduling and affordable
+                rates
+              </span>
+            </div>
+          </>
+        ))}
         <div className="quantity">
           <button>-</button>
           <span>1</span>
