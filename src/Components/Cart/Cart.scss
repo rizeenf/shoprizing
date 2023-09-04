@@ -5,7 +5,7 @@
   background: #fff;
   min-height: 300px;
   width: 320px;
-  z-index: 20;
+  z-index: 999;
   border-radius: 5px;
   border: 1px solid #a9a9a9;
 
@@ -28,12 +28,15 @@
       img {
         width: 60px;
         aspect-ratio: 2/3;
+        object-fit: cover;
       }
 
       .details {
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        gap: 10px;
 
         .itemTitle {
           font-size: 14px;
@@ -56,13 +59,13 @@
         align-items: center;
         background: #a9a9a9a9;
         color: #fff;
-        width: 40px;
+        width: 25px;
         aspect-ratio: 1/1;
         border-radius: 3px;
         cursor: pointer;
 
         &:hover {
-          background-color: #828282;
+          background-color: #fe7979;
         }
       }
 

@@ -2,12 +2,17 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import "./Product.scss";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../Redux/cartSlice";
 
 const Product = () => {
   const [products, setProducts] = useState([]);
   const [currentImage, setCurrentImage] = useState(0);
+  const [quantity, setQuantity] = useState(1);
 
-  let imageId = useParams().id;
+  const imageId = useParams().id;
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,7 +29,14 @@ const Product = () => {
     fetchData();
   }, []);
 
-  console.log(products);
+  const handleMin = () => {
+    quantity === 1 ? 1 : setQuantity((prev) => prev - 1);
+  };
+
+  const handlePlus = () => {
+    setQuantity((prev) => prev + 1);
+  };
+
   return (
     <div className="w-product">
       <div className="left">
@@ -64,7 +76,7 @@ const Product = () => {
       </div>
       <div className="right">
         {products.map((item) => (
-          <>
+          <div key={item.id}>
             <div className="title">
               <h2>{item.tags.toUpperCase()}</h2>
               <h1>${item.previewHeight}</h1>
@@ -80,16 +92,30 @@ const Product = () => {
                 rates
               </span>
             </div>
-          </>
+
+            <div className="quantity">
+              <button onClick={handleMin}>-</button>
+              <span>{quantity}</span>
+              <button onClick={handlePlus}>+</button>
+            </div>
+            <div
+              className="addToCart"
+              onClick={() =>
+                dispatch(
+                  addToCart({
+                    id: item.id,
+                    name: item.tags,
+                    img: item.largeImageURL,
+                    quantity: quantity,
+                    price: item.previewHeight,
+                  })
+                )
+              }
+            >
+              <button>+ CART</button>
+            </div>
+          </div>
         ))}
-        <div className="quantity">
-          <button>-</button>
-          <span>1</span>
-          <button>+</button>
-        </div>
-        <div className="addToCart">
-          <button>+ CART</button>
-        </div>
         <div className="details">
           <span>Vendor : UNIQLO</span>
           <span>Product : Skirt</span>
