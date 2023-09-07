@@ -34,12 +34,13 @@
     bottom: 50px;
 
     .arrow {
-      border: var(--secColor) 1px solid;
+      border: rgb(201, 201, 201) 1px solid;
       padding: 5px;
       display: flex;
       justify-content: center;
       align-items: center;
       cursor: pointer;
+      color: rgb(201, 201, 201);
 
       &:hover {
         background: var(--secColor);

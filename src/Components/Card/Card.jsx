@@ -15,7 +15,7 @@ const Card = ({ item }) => {
           )}
         </div>
 
-        <p>{item.tags.toUpperCase().slice(0, 25)}</p>
+        <p>{item.tags.toUpperCase().slice(0, 20)}</p>
 
         <div className="details">
           <div className="prices">

@@ -56,3 +56,20 @@
 .showtrue {
   height: 1800px;
 }
+
+@media screen and (max-width: 428px) {
+  .sections {
+    margin: 20px 20px;
+    height: 800px;
+
+    .top {
+      p {
+        display: none;
+      }
+    }
+  }
+
+  .showtrue {
+    height: 350dvh;
+  }
+}

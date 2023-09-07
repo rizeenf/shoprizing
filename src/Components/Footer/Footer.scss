@@ -64,3 +64,36 @@
     }
   }
 }
+
+@media screen and (max-width: 428px) {
+  .footer {
+    .wrapper {
+      margin: 0 20px;
+
+      .top {
+        .section {
+          h2 {
+            font-size: 14px;
+          }
+          p {
+            font-size: 7px;
+          }
+        }
+      }
+
+      .bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .left {
+          h1 {
+            display: none;
+          }
+        }
+        .right {
+          display: none;
+        }
+      }
+    }
+  }
+}

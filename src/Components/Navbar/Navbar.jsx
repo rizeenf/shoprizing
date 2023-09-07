@@ -9,6 +9,7 @@ import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlin
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import BurgerMenu from "./BurgerMenu";
 
 const Navbar = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -55,15 +56,16 @@ const Navbar = () => {
           <Link to="../" className="link">
             <p>Promo</p>
           </Link>
-          <SearchOutlinedIcon />
+          <SearchOutlinedIcon className="search" />
           <div className="cart" onClick={() => setIsCartOpen(!isCartOpen)}>
             <ShoppingCartOutlinedIcon />
             <div className="circle">{cart.length}</div>
           </div>
-          <FavoriteBorderOutlinedIcon />
-          <PersonOutlinedIcon />
+          <FavoriteBorderOutlinedIcon className="profil" />
+          <PersonOutlinedIcon className="profil" />
         </div>
       </div>
+      <BurgerMenu />
       {isCartOpen ? <Cart /> : ""}
     </div>
   );

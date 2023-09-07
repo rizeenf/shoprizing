@@ -1,0 +1,81 @@
+:root {
+  --bgColor: #ffecef;
+  --primColor: #ffcaca;
+  --secColor: #372948;
+  --textColor: #251b37;
+}
+
+.bwrapper {
+  .burger input {
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+  }
+
+  .burger {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 4px;
+    position: absolute;
+    top: 9px;
+    right: 15px;
+    z-index: 10;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    input,
+    &::before,
+    &::after {
+      content: "";
+      height: 3px;
+      width: 25px;
+      background-color: var(--secColor);
+      border-radius: 5px;
+      transition: all 200ms ease-in-out;
+    }
+  }
+
+  .burger input:checked {
+    width: 75%;
+    transition: all 200ms ease-in-out;
+  }
+
+  .burger:has(:checked)::before {
+    width: 50%;
+    transition: all 200ms ease-in-out;
+  }
+
+  .menu {
+    display: flex;
+    min-width: 100px;
+    height: 95dvh;
+    min-height: max-content;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    gap: 5px;
+    top: 50px;
+    right: 0px;
+    transform: translateX(-500%);
+    z-index: 99;
+    background-color: white;
+    padding: 0 30px;
+  }
+
+  .burger:has(:checked) + .menu {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (min-width: 428px), (min-height: 926px) {
+  .bwrapper {
+    display: none;
+  }
+}
