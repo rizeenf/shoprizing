@@ -42,6 +42,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-redux", "virtual:34e712b4f6b1fc103f3d8b68f1825abe48f8bd0d7a03156e7d19834ef62e3574a00bbbda6982d62789016a7960bf1fb1dcc2597b30e234e6827aa7c7385144dc#npm:8.1.2"],\
             ["react-router-dom", "virtual:34e712b4f6b1fc103f3d8b68f1825abe48f8bd0d7a03156e7d19834ef62e3574a00bbbda6982d62789016a7960bf1fb1dcc2597b30e234e6827aa7c7385144dc#npm:6.15.0"],\
             ["react-scripts", "virtual:34e712b4f6b1fc103f3d8b68f1825abe48f8bd0d7a03156e7d19834ef62e3574a00bbbda6982d62789016a7960bf1fb1dcc2597b30e234e6827aa7c7385144dc#npm:5.0.1"],\
+            ["redux", "npm:4.2.1"],\
+            ["redux-persist", "virtual:34e712b4f6b1fc103f3d8b68f1825abe48f8bd0d7a03156e7d19834ef62e3574a00bbbda6982d62789016a7960bf1fb1dcc2597b30e234e6827aa7c7385144dc#npm:6.0.0"],\
             ["sass", "npm:1.66.1"],\
             ["web-vitals", "npm:2.1.4"]\
           ],\
@@ -15724,7 +15726,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-dom", "virtual:34e712b4f6b1fc103f3d8b68f1825abe48f8bd0d7a03156e7d19834ef62e3574a00bbbda6982d62789016a7960bf1fb1dcc2597b30e234e6827aa7c7385144dc#npm:18.2.0"],\
             ["react-is", "npm:18.2.0"],\
             ["react-native", null],\
-            ["redux", null],\
+            ["redux", "npm:4.2.1"],\
             ["use-sync-external-store", "virtual:ff311aeb11a20a53b8aff4e60bb8b858d14ae5a0ce63643e891100acd86b2c73a01105070359c4ea1962673f2647bf69ee5a8aab9c624be8eb6e2d23a50d06c3#npm:1.2.0"]\
           ],\
           "packagePeers": [\
@@ -15979,6 +15981,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["redux", "npm:4.2.1"],\
             ["@babel/runtime", "npm:7.22.10"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["redux-persist", [\
+        ["npm:6.0.0", {\
+          "packageLocation": "./.yarn/cache/redux-persist-npm-6.0.0-56dad69feb-edaf10dbf1.zip/node_modules/redux-persist/",\
+          "packageDependencies": [\
+            ["redux-persist", "npm:6.0.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:34e712b4f6b1fc103f3d8b68f1825abe48f8bd0d7a03156e7d19834ef62e3574a00bbbda6982d62789016a7960bf1fb1dcc2597b30e234e6827aa7c7385144dc#npm:6.0.0", {\
+          "packageLocation": "./.yarn/__virtual__/redux-persist-virtual-e57d39bcdf/0/cache/redux-persist-npm-6.0.0-56dad69feb-edaf10dbf1.zip/node_modules/redux-persist/",\
+          "packageDependencies": [\
+            ["redux-persist", "virtual:34e712b4f6b1fc103f3d8b68f1825abe48f8bd0d7a03156e7d19834ef62e3574a00bbbda6982d62789016a7960bf1fb1dcc2597b30e234e6827aa7c7385144dc#npm:6.0.0"],\
+            ["@types/react", null],\
+            ["@types/redux", null],\
+            ["react", "npm:18.2.0"],\
+            ["redux", "npm:4.2.1"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "@types/redux",\
+            "react",\
+            "redux"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -16699,6 +16727,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-redux", "virtual:34e712b4f6b1fc103f3d8b68f1825abe48f8bd0d7a03156e7d19834ef62e3574a00bbbda6982d62789016a7960bf1fb1dcc2597b30e234e6827aa7c7385144dc#npm:8.1.2"],\
             ["react-router-dom", "virtual:34e712b4f6b1fc103f3d8b68f1825abe48f8bd0d7a03156e7d19834ef62e3574a00bbbda6982d62789016a7960bf1fb1dcc2597b30e234e6827aa7c7385144dc#npm:6.15.0"],\
             ["react-scripts", "virtual:34e712b4f6b1fc103f3d8b68f1825abe48f8bd0d7a03156e7d19834ef62e3574a00bbbda6982d62789016a7960bf1fb1dcc2597b30e234e6827aa7c7385144dc#npm:5.0.1"],\
+            ["redux", "npm:4.2.1"],\
+            ["redux-persist", "virtual:34e712b4f6b1fc103f3d8b68f1825abe48f8bd0d7a03156e7d19834ef62e3574a00bbbda6982d62789016a7960bf1fb1dcc2597b30e234e6827aa7c7385144dc#npm:6.0.0"],\
             ["sass", "npm:1.66.1"],\
             ["web-vitals", "npm:2.1.4"]\
           ],\

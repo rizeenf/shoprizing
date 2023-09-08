@@ -67,3 +67,37 @@
     }
   }
 }
+
+@media screen and (max-width: 428px) {
+  .w-products {
+    flex-direction: column;
+    .left {
+      margin: 20px 0;
+      position: inherit;
+
+      .filter {
+        flex-direction: row;
+
+        h3 {
+          display: none;
+        }
+      }
+      .filter:nth-child(2) {
+        display: none;
+      }
+
+      span {
+        display: none;
+      }
+    }
+
+    .right {
+      .header {
+        height: 80px;
+      }
+      .listProducts {
+        justify-content: space-evenly;
+      }
+    }
+  }
+}

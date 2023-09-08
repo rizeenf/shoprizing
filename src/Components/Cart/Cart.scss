@@ -3,7 +3,7 @@
   top: 50px;
   right: 80px;
   background: #fff;
-  min-height: 300px;
+  min-height: min-content;
   width: 320px;
   z-index: 999;
   border-radius: 5px;
@@ -16,6 +16,13 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    .itemDesc {
+      margin-left: 20px;
+      font-size: 12px;
+      text-align: justify;
+      color: #a9a9a9;
+    }
 
     .item {
       margin: 0 10px;
@@ -118,7 +125,8 @@
   }
 }
 @media screen and (max-width: 428px) {
-  .w-cart {
+  .c-cart {
     right: 55px;
+    z-index: 99;
   }
 }

@@ -26,27 +26,31 @@ const Cart = () => {
           <h3>Products in your cart</h3>
         </div>
         <div className="listItem">
-          {cart.map((item) => (
-            <div className="item" key={item.id}>
-              <img src={item.img} alt="" />
-              <div className="details">
-                <div className="itemTitle">{item.name.toUpperCase()}</div>
-                <div className="itemDesc">
-                  {item.name}
-                  {item.name}
+          {cart.length === 0 ? (
+            <div className="itemDesc">You don't have any items yet</div>
+          ) : (
+            cart.map((item) => (
+              <div className="item" key={item.id}>
+                <img src={item.img} alt="" />
+                <div className="details">
+                  <div className="itemTitle">{item.name.toUpperCase()}</div>
+                  <div className="itemDesc">
+                    {item.name}
+                    {item.name}
+                  </div>
+                  <div className="itemPrice">
+                    {item.quantity} x ${item.price}
+                  </div>
                 </div>
-                <div className="itemPrice">
-                  {item.quantity} x ${item.price}
+                <div
+                  className="delete"
+                  onClick={() => dispatch(removeFromCart({ id: item.id }))}
+                >
+                  X
                 </div>
               </div>
-              <div
-                className="delete"
-                onClick={() => dispatch(removeFromCart({ id: item.id }))}
-              >
-                X
-              </div>
-            </div>
-          ))}
+            ))
+          )}
         </div>
         <div className="subtotal">
           <span>Subtotal</span>

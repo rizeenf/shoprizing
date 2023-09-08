@@ -90,33 +90,35 @@
 }
 
 @media screen and (max-width: 428px) {
-  .navbar {
-    .left {
-      .currency {
-        display: none !important;
+  .wrapper {
+    .navbar {
+      .left {
+        .currency {
+          display: none !important;
+        }
+        .link {
+          display: none;
+        }
       }
-      .link {
-        display: none;
+      .center {
+        h2 {
+          font-size: 18px;
+        }
       }
-    }
-    .center {
-      h2 {
-        font-size: 18px;
-      }
-    }
 
-    .right {
-      .link {
-        display: none;
-      }
-      .search {
-        display: none;
-      }
-      .profil {
-        display: none;
-      }
-      .cart {
-        margin: 0 40px;
+      .right {
+        .link {
+          display: none;
+        }
+        .search {
+          display: none;
+        }
+        .profil {
+          display: none;
+        }
+        .cart {
+          margin: 0 40px;
+        }
       }
     }
   }

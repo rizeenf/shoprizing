@@ -65,8 +65,8 @@ const Navbar = () => {
           <PersonOutlinedIcon className="profil" />
         </div>
       </div>
-      <BurgerMenu />
       {isCartOpen ? <Cart /> : ""}
+      <BurgerMenu />
     </div>
   );
 };

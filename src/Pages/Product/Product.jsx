@@ -92,27 +92,28 @@ const Product = () => {
                 rates
               </span>
             </div>
-
-            <div className="quantity">
-              <button onClick={handleMin}>-</button>
-              <span>{quantity}</span>
-              <button onClick={handlePlus}>+</button>
-            </div>
-            <div
-              className="addToCart"
-              onClick={() =>
-                dispatch(
-                  addToCart({
-                    id: item.id,
-                    name: item.tags,
-                    img: item.largeImageURL,
-                    quantity: quantity,
-                    price: item.previewHeight,
-                  })
-                )
-              }
-            >
-              <button>+ CART</button>
+            <div className="cart">
+              <div className="quantity">
+                <button onClick={handleMin}>-</button>
+                <span>{quantity}</span>
+                <button onClick={handlePlus}>+</button>
+              </div>
+              <div
+                className="addToCart"
+                onClick={() =>
+                  dispatch(
+                    addToCart({
+                      id: item.id,
+                      name: item.tags,
+                      img: item.largeImageURL,
+                      quantity: quantity,
+                      price: item.previewHeight,
+                    })
+                  )
+                }
+              >
+                <button>+ CART</button>
+              </div>
             </div>
           </div>
         ))}

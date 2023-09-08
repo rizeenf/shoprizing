@@ -31,7 +31,7 @@ const Products = () => {
           <h3>Product Categories</h3>
           <div className="input">
             <input type="checkbox" name="1" id="1" />
-            <label htmlFor="1">Shirt</label>
+            <label htmlFor="1">Shirts</label>
           </div>
           <div className="input">
             <input type="checkbox" name="2" id="2" />
@@ -43,7 +43,7 @@ const Products = () => {
           </div>
           <div className="input">
             <input type="checkbox" name="4" id="4" />
-            <label htmlFor="4">Jacket</label>
+            <label htmlFor="4">Others</label>
           </div>
         </div>
         <div className="filter">
@@ -71,11 +71,12 @@ const Products = () => {
         <img
           src="https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt=""
+          className="header"
         />
         <div className="listProducts">
           <Suspense fallback={<div>Loading..</div>}>
             {products?.map((item) => (
-              <Card item={item} key={item.id} />
+              <Card item={item} key={item.id} className="items" />
             ))}
           </Suspense>
         </div>

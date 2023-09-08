@@ -109,9 +109,10 @@
 @media screen and (max-width: 428px) {
   .cards {
     max-width: min-content;
+    margin: 0;
 
     .imgs {
-      max-height: 250px;
+      max-height: 230px;
     }
 
     p {
